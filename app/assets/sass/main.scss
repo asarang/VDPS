@@ -1,0 +1,283 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/related-nav';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below...
+///////////////////////////////////////////
+
+
+//NHS BSA Full Width Header
+
+.NHSBSA-full-width-header {
+
+    .nhsuk-width-container {
+        @include nhsuk-width-container-fluid;
+
+        @include mq($until: tablet) {
+            padding-left: nhsuk-spacing(0);
+            padding-right: nhsuk-spacing(0);
+        }
+    }
+
+}
+
+//NHS BSA Full Width Footer
+
+.NHSBSA-full-width-footer {
+
+    .nhsuk-width-container {
+        @include nhsuk-width-container-fluid
+    }
+
+}
+
+.nhsabsa-sidebar-container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  min-height: calc(100vh - 99px);
+  margin: 0;
+  padding: 0; }
+  .nhsabsa-sidebar-container .nhsabsa-sidebar-wrapper {
+    flex: 1 0 auto;
+    display: flex; }
+    .nhsabsa-sidebar-container .nhsabsa-sidebar-wrapper .nhsabsa-sidebar-content {
+      flex: 1 0;
+      background-color: #f0f4f5;
+      padding: 32px;
+      margin: 0px; }
+    .nhsabsa-sidebar-container .nhsabsa-sidebar-wrapper .nhsabsa-sidebar-nav {
+      width: 360px;
+      order: -1;
+      background-color: #d8dde0;
+      margin: 0; }
+
+.side-nav h3 {
+  padding: 16px;
+  margin: 0; }
+
+.side-nav p {
+  padding: 0px 16px; }
+
+.side-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px; }
+
+.side-nav li a {
+  display: block;
+  color: #005EB8;
+  font-size: 18px;
+  text-decoration: none;
+  border-top: #ccc 1px solid;
+  border-bottom: #ccc 1px solid;
+  padding: 16px; }
+  .side-nav li a.active {
+    background-color: #005EB8;
+    color: white;
+    font-weight: 600;
+    border-top: #005eb8 1px solid;
+    border-bottom: #005eb8 1px solid; }
+
+.side-nav li a:hover:not(.active) {
+  background-color: #005eb8;
+  color: white; }
+
+@media (min-width: 48.0525em) {
+  .nhsabsa-sidebar-container {
+    min-height: calc(100vh - 80px); }
+  .side-nav h3 {
+    padding: 32px; }
+  .side-nav p {
+    padding: 0px 32px; }
+  .side-nav li a {
+    padding: 16px 32px; } }
+
+    .nhsBSA-sidebar-container {
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - 99px);
+      margin: 0;
+      padding: 0; }
+      @media (min-width: 48.0525em) {
+        .nhsBSA-sidebar-container {
+          min-height: calc(100vh - 80px); } }
+      .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper {
+        flex: 1 0 auto;
+        display: flex; }
+        .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content {
+          flex: 1 0 auto;
+          background-color: #f0f4f5;
+          padding: 0px;
+          margin: 0px; }
+          .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            display: block; }
+            @media (min-width: 40.0625em) {
+              .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
+                padding-top: 32px; } }
+            @media (min-width: 40.0625em) {
+              .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
+                padding-bottom: 32px; } }
+        .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav {
+          width: 300px;
+          order: -1;
+          background-color: #d8dde0;
+          margin: 0; }
+          .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav .nhsuk-back-link {
+            padding: 16px;
+            margin: 0; }
+            @media (min-width: 48.0525em) {
+              .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav .nhsuk-back-link {
+                padding: 32px;
+                margin: 0; } }
+      @media (max-width: 48.0525em) {
+        .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper {
+          flex-direction: column; }
+          .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav {
+            width: 100%; } }
+
+    .side-nav h3 {
+      padding: 16px;
+      margin: 0; }
+      @media (min-width: 48.0525em) {
+        .side-nav h3 {
+          padding: 32px; } }
+
+    .side-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0px; }
+
+    .side-nav li {
+      margin: 0px; }
+
+    .side-nav li a {
+      display: block;
+      color: #005EB8;
+      font-size: 18px;
+      text-decoration: none;
+      border-top: #ccc 1px solid;
+      border-bottom: #ccc 1px solid;
+      padding: 16px; }
+      @media (min-width: 48.0525em) {
+        .side-nav li a {
+          padding: 16px 32px; } }
+
+    .side-nav li a.active {
+      background-color: #005EB8;
+      color: white;
+      font-weight: 600;
+      border-top: #005EB8 1px solid;
+      border-bottom: #005EB8 1px solid; }
+
+    .side-nav li a:hover:not(.active) {
+      background-color: #005EB8;
+      color: white; }
+
+    .side-nav .action-buttons {
+      padding: 16px; }
+      @media (min-width: 48.0525em) {
+        .side-nav .action-buttons {
+          padding: 32px; } }
+
+
+// Styles added for SSECS
+.nhsuk-table td.nhsuk-table__cell--align-right {
+  text-align: right;
+}
+
+header span.heading-secondary {
+  color: #6f777b;
+  display: table-header-group;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.11111;
+  margin-bottom: 0;
+  padding-bottom: 6px;
+  padding-top: 4px;
+  text-transform: none;
+  + h1 {
+    font-size: 36px;
+    margin-bottom: 2rem;
+  }
+}
+
+div.nhsuk-form-group + div.nhsuk-form-group {
+  margin-top: 4rem;
+  &.nhsuk-form-group--margin-s {
+    margin-top: 2rem;
+  }
+}
+
+.nhsuk-form-group--margin-s + .nhsuk-heading-l {
+  margin-top: 2rem;
+}
+
+.nhsuk-label.nhsuk-label--s {
+  margin-bottom: 10px;
+}
+
+dl.nhsuk-summary-list {
+  table-layout: unset;
+}
+
+dt.nhsuk-summary-list__key {
+  width: 50%;
+}
+
+.declaration {
+  border: 3px solid #bfc1c3;
+  margin-top: 15px;
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+  &:before {
+    content:'DECLARATION';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 5px;
+    background-color: #bfc1c3;
+    color: white;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
+
+  + fieldset {
+    display: block;
+    margin-inline-start: 0;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 0;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+    legend {
+      visibility: hidden;
+    }
+
+    .nhsuk-form-group + .nhsuk-form-group {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.nhsuk-card.nhsuk-card--confirmation {
+  background-color: #005EB8;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 30px 0;
+}
+        

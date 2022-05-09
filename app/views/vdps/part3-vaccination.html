@@ -1,0 +1,106 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} VDPS {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-back-link">
+                  <a class="nhsuk-back-link__link"
+                        href="javascript:history.back()"><svg aria-hidden="true"
+                        class="nhsuk-icon nhsuk-icon__chevron-left"
+                        viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path></svg> Go back</a>
+                </div>
+                
+                <header class="page-header">
+                    <span class="heading-secondary">Vaccine Damage Payment Scheme</span>
+                    <h1 class="nhsuk-heading-l govuk-heading-l">Vaccinations</h1>
+                </header>
+                  
+                <p style="color:red">Once a vaccine has been selected the dates received can be entered, and will loop through until all dates for that vaccine have been entered. 
+                <br><br>Then another vaccine can be seleted and dates the added using the same process. This will loop until all the vaccines have been entered.
+                <br><br>All vaccines and dates selected will then be presented in a summary page with the option to make changes if required.</br>
+                </p> 
+
+                <span class="nhsuk-hint">
+                    Enter details of all vaccinations you had and tell us when these vaccinations were given.
+                </span>
+                  <br>
+
+                <form action="summary"
+                      class="form"
+                      method="get">
+                  <div class="nhsuk-form-group">
+                    <h1 class="nhsuk-label-wrapper"><label class="nhsuk-label nhsuk-label--m"
+                          for="patient-full-name">Vaccine</label></h1>
+                  
+                          <div class="test-case" style="overflow: visible">
+                              <div>
+                                  <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true">
+                                      <option value="#">Choose vaccine</option>
+                                      <option value="#">Coronavirus (COVID-19)</option>
+                                      <option value="#">Diphtheria</option>
+                                      <option value="#">Diptheria, tetanus and pertussis (DTP/triple)</option>
+                                      <option value="#">Diptheria, tetanus, pertussis and polio (DtaP/IPV)</option>
+                                      <option value="#">Diptheria, tetanus, pertussis, polio and Haemophilus influenzae type b (DtaP/IPV/Hib)</option>
+                                      <option value="#">Haemophilus influenzae type b (Hib)</option>
+                                      <option value="#">Haemophilus influenzae type b, Meningococcal Group C (Hib/Men C)</option>
+                                      <option value="#">Human papillomavirus (HPV)</option>
+                                      <option value="#">Influenza</option>
+                                      <option value="#">Measles</option>
+                                      <option value="#">Measles, mumps and rubella (MMR)</option>
+                                      <option value="#">Meningococcal Group B (Men B)</option>
+                                      <option value="#">Meningococcal Group C (Men C, Men ACWY)</option>
+                                      <option value="#">Meningococcal Group W (Men ACWY)</option>
+                                      <option value="#">Mumps</option>
+                                      <option value="#">Pandemic influenza A (H1N1) 2009 (swine flu) up to 31 August 2010</option>
+                                      <option value="#">Pertussis (whooping cough)</option>
+                                      <option value="#">Pneumococcal (PCV)</option>
+                                      <option value="#">Poliomyelitis (orally administered)</option>
+                                      <option value="#">Rotavirus</option>
+                                      <option value="#">Rubella (German measles)</option>
+                                      <option value="#">Tetanus</option>
+                                      <option value="#">Tetanus, diphtheria and polio (Td/IPV)</option>
+                                      <option value="#">Tuberculosis (TB)</option>
+                                    </select>
+                              </div>
+                          </div>
+                </form><br>
+
+                              <form action="part3-vaccination-date" method="post" novalidate>
+                                <br>
+                                <button class="nhsuk-button" type="submit">
+                                      Continue
+                                </button>
+                              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>
